@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Formulário HTML</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.css">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!--Plugin jquery das mascaras-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
+
+    <link rel="icon" type="image/png" Tamanhos="96x96" href="favicon/favicon-96x96.png">
+
+    <script>
+        $(document).ready(function () {
+            $('#cpf').mask('000.000.000-00')
+            $('#nascimento').mask('00/00/0000')
+            $('#telefone').mask('(00) 0 0000-0000')
+        })
+    </script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    
+    <script data-ad-client="ca-pub-4337055906490098" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+
+<body>
+    <div class="card-footer">
+        <div class="col-md-8 mb-5">
+            <a href="/agendamento" style="box-shadow: 0px 2px 4px #007bff;" class="btn btn-primary">Voltar para
+                Agendamentos</a>
+        </div>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-10 ">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="/dadosagendamento/salvar" method="post">
+                            <h1 class="text-center text-info"> Preencha o formulário abaixo</h1>
+                            <h3 class="text-center text-info">Todos campos com <em class="important">*</em> são
+                                OBRIGATÓRIOS</h3>
+                            <!--inicio checkbox-->
+                            <br>
+                            <div class="field">
+                                <label class="text-center text-info"><strong>Marque o agendamento que precisa:</strong></label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="tipo_agendamento[]"
+                                    id="inlineCheckbox1" value="Detran">
+                                <label class="form-check-label text-info" for="inlineCheckbox1">DETRAN</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="tipo_agendamento[]"
+                                    id="inlineCheckbox2" value="Rg 1 Via">
+                                <label class="form-check-label text-info" for="inlineCheckbox1">RG 1º VIA</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="tipo_agendamento[]"
+                                    id="inlineCheckbox3" value="Rg 2 via">
+                                <label class="form-check-label text-info" for="inlineCheckbox2">RG 2ª VIA</label>
+                            </div>
+                            <!--Fim checkbox-->
+                            <div class="form-group">
+                                <label for="nome" class="text-info">Digite seu nome<em
+                                        class="important">*</em>:</label><br>
+                                <input type="text" name="nome" id="nome" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="sexo" class="text-info">Sexo<em class="important">*</em>:</label>
+                                <INPUT TYPE="RADIO" id="sexo" NAME="sexo" VALUE="masculino"> Masculino
+                                <INPUT TYPE="RADIO" id="sexo" NAME="sexo" VALUE="feminino"> Feminino
+                            </div>
+                            <div class="form-group">
+                                <label for="cpf" class="text-info">Digite seu CPF<em
+                                        class="important">*</em>:</label><br>
+                                <input type="text" name="cpf" id="cpf" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rg" class="text-info">Digite seu RG:</label><br>
+                                <input type="text" name="rg" id="rg" class="form-control"
+                                    placeholder="Só é obrigatório se não for primeira via">
+                            </div>
+                            <div class="form-group">
+                                <label for="pai" class="text-info">Nome do Pai <em class="important">*</em>:</label><br>
+                                <input type="text" name="pai" id="pai" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="mae" class="text-info">Nome da Mãe <em class="important">*</em>:</label><br>
+                                <input type="text" name="mae" id="mae" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nascimento" class="text-info">Data de Nascimento <em
+                                        class="important">*</em>:</label><br>
+                                <input type="text" name="nascimento" id="nascimento" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="endereco" class="text-info">Endereço <em
+                                        class="important">*</em>:</label><br>
+                                <input type="text" name="endereco" id="endereco" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="numero" class="text-info">Número / Complemento <em
+                                        class="important">*</em>:</label><br>
+                                <input type="text" name="numero" id="numero" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cidade" class="text-info">Cidade <em class="important">*</em>:</label><br>
+                                <input type="text" name="cidade" id="cidade" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="estado" class="text-info">Estado <em class="important">*</em>:</label><br>
+                                <input type="text" name="estado" id="estado" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefone" class="text-info">Digite seu telefone<em
+                                        class="important">*</em>:</label><br>
+                                <input type="text" name="telefone" id="telefone" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="text-info">Digite seu e-mail<em
+                                        class="important">*</em>:</label><br>
+                                <input type="text" name="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmaEmail" class="text-info">Confirme seu e-mail<em
+                                        class="important">*</em>:</label><br>
+                                <input type="text" name="confirmaEmail" id="confirmaEmail" class="form-control"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="periodo" class="text-info">Escolha o horário preferêncial para atendimento:
+                                    <em class="important">O período selecionado pode sofrer
+                                        alterações por conta das medidas contra o Covid-19</em></label>
+                                <select name="periodo" id="periodo" class="text-info">
+                                    <option value="matutino">Matutino</option>
+                                    <option value="vespertino">Vespertino</option>
+                                    <option value="independente">Independe</option>
+                                </select>
+                            </div>
+
+                            <!--Seleção das Certidões desejadas pelo cliente-->
+                            <br>
+
+                            <!--End Seleção dos Agendamentos desejados pelo cliente-->
+                            <hr><br>
+                            <h4 class="text-center text-info">Clique em enviar para finalizar o seu pedido e ir para
+                                página de pagamento</h4>
+                            <br>
+
+                            <div class="g-recaptcha" data-sitekey="6LeNf8EZAAAAAAO-dwQuh_hJj0TWn8spe3vEG5eN" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Enviar">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--API Whatsapp-->
+        <script type="text/javascript">
+                (function () {
+                    var options = {
+                        whatsapp: "+55(67)981572635", // WhatsApp number
+                        call_to_action: "Fale Conosco!", // Call to action
+                        position: "right", // Position may be 'right' or 'left'
+                    };
+                    var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+                    var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+                    s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+                    var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+                })();
+        </script>
+        <!--End API Whatsapp-->
+
+
+</body>
+
+</html>

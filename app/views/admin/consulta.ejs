@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Xacomigo | Consulta</title>
+	<!-- JQuery -->
+	<script src="js/jquery-2.2.1.js"></script>
+
+	    <!-- bootstrap - link cdn -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- incluindo css -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="/estilo.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+	<!--Plugin jquery das mascaras-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
+
+    <link rel="icon" type="image / png" Tamanhos="96x96" href="favicon/favicon-96x96.png">
+
+    <script>
+        $(document).ready(function () {
+            $('#cpf').mask('000.000.000-00')
+        })
+    </script>
+
+</head>
+
+<body>
+
+	<div id="">
+        <h3 class="text-center text-white text-info pt-5">Consultar Formulário de Clientes</h3>
+        <br><hr><br>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-4">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post">
+                            <h3 class="text-center text-info">Consultar Cliente </h3>
+                            <br>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Digite o CPF do Cliente:</label><br>
+                                <input type="text" name="cpf" id="cpf" class="form-control" minlength="14" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="submit" onclick="submitForm('/resultado_pesquisa_agendamento')" class="btn btn-info btn-md" value="Agendamento">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" onclick="submitForm('/resultado_pesquisa_certidao')" class="btn btn-info btn-md" value="Certidões">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" onclick="submitForm('/resultado_pesquisa_mei')" class="btn btn-info btn-md" value="Mei">
+                            </div>
+
+                            <script>
+                                function submitForm(source){
+                                    var elm = document.getElementById('login-form')
+                                    elm.setAttribute('action', source)
+                                    elm.submit()
+                                }
+                            </script>
+            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>

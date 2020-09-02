@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <title>XACOMIGO | Consulta</title>
+    <!-- JQuery -->
+    <script src="js/jquery-2.2.1.js"></script>
+
+    <!-- bootstrap - link cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- incluindo css -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image / png" Tamanhos="96x96" href="favicon/favicon-96x96.png">
+
+</head>
+
+<body>
+
+    <div id="">
+
+        <h3 class="text-center text-white text-info pt-5">Resultado da Pesquisa</h3>
+        <br>
+
+        <div class="col-12 text-center">
+            <a href="/consulta" class="btn btn-primary text-center" role="button">Nova Consulta</a>
+        </div>
+        <br>
+
+        <hr><br>
+        <div id="resultado_consulta" class="container">
+
+            <p class="text-info font-consulta">
+                Nome: <%= resultado_pesquisa[0].nome %>
+            </p>
+
+            <p class="text-info font-consulta">
+                CPF: <%= resultado_pesquisa[0].cpf %>
+            </p>
+
+            <p class="text-info font-consulta">
+                CNPJ: <%= resultado_pesquisa[0].cnpj %>
+            </p>
+
+            <p class="text-info font-consulta">
+                Telefone: <%= resultado_pesquisa[0].telefone %>
+            </p>
+
+            <p class="text-info font-consulta">
+                E-mail: <%= resultado_pesquisa[0].email %>
+            </p>
+
+            <p class="text-info font-consulta">
+                RG: <%= resultado_pesquisa[0].rg %>
+            </p>
+
+            <p class="text-info font-consulta">
+                Data Nascimento: <%= resultado_pesquisa[0].nascimento %>
+            </p>
+
+            <p class="text-info font-consulta">
+                Sexo: <%= resultado_pesquisa[0].sexo %>
+            </p>
+
+            <p class="text-info font-consulta">
+                Nome da mãe: <%= resultado_pesquisa[0].mae %>
+            </p>
+
+            <p class="text-info font-consulta">
+                Nome do Pai: <%= resultado_pesquisa[0].pai %>
+            </p>
+
+            <p class="text-info font-consulta">
+                Endereço: <%= resultado_pesquisa[0].endereco %>
+            </p>
+
+            <p class="text-info font-consulta">
+                Número: <%= resultado_pesquisa[0].numero %>
+            </p>
+
+            <p class="text-info font-consulta">
+                Cidade: <%= resultado_pesquisa[0].cidade %>
+            </p>
+
+            <p class="text-info font-consulta">
+                Estado: <%= resultado_pesquisa[0].estado %>
+            </p>
+
+            <p class="text-info font-consulta">
+                Serviço Solicitado: <%= resultado_pesquisa[0].tipo_agendamento %>
+            </p>
+
+            <p class="text-info font-consulta">
+                Serviço Solicitado: <%= resultado_pesquisa[0].tipo_certidao %>
+            </p>
+
+            <p class="text-info font-consulta">
+                Serviço Solicitado: <%= resultado_pesquisa[0].tipo_mei %>
+            </p>
+
+            <p class="text-info font-consulta">
+                Periodo: <%= resultado_pesquisa[0].periodo %>
+            </p>
+
+        </div>
+
+        <div class="col-12 text-center">
+            <a href="/consulta" class="btn btn-primary text-center" role="button">Nova Consulta</a>
+        </div>
+        
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

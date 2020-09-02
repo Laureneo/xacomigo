@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Formulário HTML</title>
+    <meta charset="utf-8" />
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!--Plugin jquery das mascaras-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
+
+    <link rel="icon" type="image / png" Tamanhos="96x96" href="favicon/favicon-96x96.png">
+
+    <script>
+        $(document).ready(function () {
+            $('#cpf').mask('000.000.000-00')
+            $('#cnpj').mask('00.000.000/0000-00')
+            $('#telefone').mask('(00) 0 0000-0000')
+        })
+    </script>
+    
+    <script data-ad-client="ca-pub-4337055906490098" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+
+<body>
+    <div class="card-footer">
+    <div class="col-md-8 mb-5">
+        <a href="/mei" style="box-shadow: 0px 2px 4px #007bff;" class="btn btn-primary">Voltar para MEI</a>
+    </div>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-10 ">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="/dadosmei/salvar" method="post">
+                            <h1 class="text-center text-info"> Preencha o formulário abaixo</h1>
+                            <h3 class="text-center text-info">Todos campos com <em class="important">*</em> são
+                                OBRIGATÓRIOS</h3>
+                                <!-- Inicio checkbox -->
+                                <div class="field">
+                                <label><strong>Marque o(s) serviço(s) Mei que precisa:</strong></label>
+                                 </div>
+
+                                     <div class="form-check form-check-inline">
+                                     <input class="form-check-input" type="checkbox" name="tipo_mei[]" id="inlineCheckbox1" value="Abertura Mei">
+                                  <label class="form-check-label" for="inlineCheckbox1">Abertura Mei</label>
+                                     </div>
+            
+                                    <div class="form-check form-check-inline">
+                                     <input class="form-check-input" type="checkbox" name="tipo_mei[]" id="inlineCheckbox2" value="Certificado do Mei">
+                                     <label class="form-check-label" for="inlineCheckbox1">Certificado do Mei</label>
+                                    </div>
+    
+                                    <div class="form-check form-check-inline">
+                                     <input class="form-check-input" type="checkbox" name="tipo_mei[]" id="inlineCheckbox3" value="Boletos do Ano Inteiro">
+                                       <label class="form-check-label" for="inlineCheckbox2">Boletos do Ano Inteiro</label>
+                                      </div>
+    
+                                     <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="checkbox" name="tipo_mei[]" id="inlineCheckbox1" value="Declaracao Anual do Mei">
+                                      <label class="form-check-label" for="inlineCheckbox3">Declaração Anual do Mei</label>
+                                     </div>
+    
+                                     <div class="form-check form-check-inline">
+                                         <input class="form-check-input" type="checkbox" name="tipo_mei[]" id="inlineCheckbox2" value="Baixa da Inscricao Cnpj">
+                                          <label class="form-check-label" for="inlineCheckbox1">Baixa da Inscrição Cnpj</label>
+                                             </div>
+                                
+                            <div class="form-group">
+                                <label for="nome" class="text-info">Digite seu nome<em
+                                        class="important">*</em>:</label><br>
+                                <input type="text" name="nome" id="nome" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cpf" class="text-info">Digite seu CPF<em
+                                        class="important">*</em>:</label><br>
+                                <input type="text" name="cpf" id="cpf" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cnpj" class="text-info">Digite seu CNPJ:</label><br>
+                                <input type="text" name="cnpj" id="cnpj" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone" class="text-info">Digite seu telefone<em
+                                        class="important">*</em>:</label><br>
+                                <input type="text" name="telefone" id="telefone" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="text-info">Digite seu e-mail<em
+                                        class="important">*</em>:</label><br>
+                                <input type="text" name="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmaEmail" class="text-info">Confirme seu e-mail<em
+                                        class="important">*</em>:</label><br>
+                                <input type="text" name="confirmaEmail" id="confirmaEmail" class="form-control" required>
+                            </div>
+                            <div class="g-recaptcha" data-sitekey="6LeNf8EZAAAAAAO-dwQuh_hJj0TWn8spe3vEG5eN" required></div>
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Enviar">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+
+        <!--API Whatsapp-->
+        <script type="text/javascript">
+                (function () {
+                    var options = {
+                        whatsapp: "+55(67)981572635", // WhatsApp number
+                        call_to_action: "Fale Conosco!", // Call to action
+                        position: "right", // Position may be 'right' or 'left'
+                    };
+                    var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+                    var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+                    s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+                    var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+                })();
+        </script>
+        <!--End API Whatsapp-->
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+
+</body>
+
+</html>
