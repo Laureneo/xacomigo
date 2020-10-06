@@ -29,8 +29,9 @@
         })
     </script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    
-    <script data-ad-client="ca-pub-4337055906490098" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <script data-ad-client="ca-pub-4337055906490098" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </head>
 
@@ -51,7 +52,8 @@
                             <!--inicio checkbox-->
                             <br>
                             <div class="field">
-                                <label class="text-center text-info"><strong>Marque o agendamento que precisa:</strong></label>
+                                <label class="text-center text-info"><strong>Marque o agendamento que
+                                        precisa:</strong></label>
                             </div>
 
                             <div class="form-check form-check-inline">
@@ -72,78 +74,244 @@
                                 <label class="form-check-label text-info" for="inlineCheckbox2">RG 2ª VIA</label>
                             </div>
                             <!--Fim checkbox-->
+
                             <div class="form-group">
-                                <label for="nome" class="text-info">Digite seu nome<em
-                                        class="important">*</em>:</label><br>
+                                <label for="cidade_agendamento" class="text-info"><span class="important">*</span>
+                                    Selecione o município em que deseja solicitar o serviço:</label>
+                                <select type="text" class="form-control" id="cidade_agendamento" name="cidade_agendamento">
+                                    <option>SELECIONE</option>
+                                    <option>AMAMBAI</option>
+                                    <option>ANGELICA</option>
+                                    <option>APARECIDA DO TABOADO</option>
+                                    <option>AQUIDAUANA</option>
+                                    <option>BATAGUASSU</option>
+                                    <option>BODOQUENA</option>
+                                    <option>BONITO</option>
+                                    <option>CAARAPÓ</option>
+                                    <option>CAMAPUÃ</option>
+                                    <option>CAMPO GRANDE</option>
+                                    <option>CHAPADÃO DO SUL</option>
+                                    <option>CORONEL SAPUCAIA</option>
+                                    <option>CORUMBÁ</option>
+                                    <option>COSTA RICA</option>
+                                    <option>COXIM</option>
+                                    <option>DOIS IRMÃOS DO BURITI</option>
+                                    <option>DOURADOS</option>
+                                    <option>FATIMA DO SUL</option>
+                                    <option>ITAPORÃ</option>
+                                    <option>IVINHEMA</option>
+                                    <option>JARDIM</option>
+                                    <option>JUTI</option>
+                                    <option>MARACAJU</option>
+                                    <option>MUNDO NOVO</option>
+                                    <option>NAVIRAÍ</option>
+                                    <option>NIOAQUE</option>
+                                    <option>NOVA ANDRADINA</option>
+                                    <option>PARANAÍBA</option>
+                                    <option>PEDRO GOMES</option>
+                                    <option>PONTA PORÃ</option>
+                                    <option>PORTO MURTINHO</option>
+                                    <option>RIO VERDE DE MATO GROSSO</option>
+                                    <option>ROCHEDO</option>
+                                    <option>SÃO GABRIEL</option>
+                                    <option>TACURU</option>
+                                    <option>TRÊS LAGOAS</option>
+
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nome" class="text-info">
+                                    <span class="important">*</span>
+                                    Digite seu nome:
+                                </label><br>
                                 <input type="text" name="nome" id="nome" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label for="sexo" class="text-info">Sexo<em class="important">*</em>:</label>
+                                <label for="sexo" class="text-info"><span class="important">*</span>
+                                    Sexo:</label>
                                 <INPUT TYPE="RADIO" id="sexo" NAME="sexo" VALUE="masculino"> Masculino
                                 <INPUT TYPE="RADIO" id="sexo" NAME="sexo" VALUE="feminino"> Feminino
                             </div>
                             <div class="form-group">
-                                <label for="cpf" class="text-info">Digite seu CPF<em
-                                        class="important">*</em>:</label><br>
+                                <label for="cpf" class="text-info"><span class="important">*</span>
+                                    Digite seu CPF:</label><br>
                                 <input type="text" name="cpf" id="cpf" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label for="rg" class="text-info">Digite seu RG:</label><br>
+                                <label for="rg" class="text-info"><span class="important">*</span>
+                                    Digite seu RG:</label><br>
                                 <input type="text" name="rg" id="rg" class="form-control"
-                                    placeholder="Só é obrigatório se não for primeira via">
+                                    placeholder="Obs.: Primeira via não precisa">
                             </div>
                             <div class="form-group">
-                                <label for="pai" class="text-info">Nome do Pai <em class="important">*</em>:</label><br>
+                                <label for="pai" class="text-info">
+                                    Nome do Pai:</label><br>
                                 <input type="text" name="pai" id="pai" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="mae" class="text-info">Nome da Mãe <em class="important">*</em>:</label><br>
+                                <label for="mae" class="text-info"><span class="important">*</span>
+                                    Nome da Mãe:</label><br>
                                 <input type="text" name="mae" id="mae" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label for="nascimento" class="text-info">Data de Nascimento <em
-                                        class="important">*</em>:</label><br>
+                                <label for="nascimento" class="text-info"><span class="important">*</span>
+                                    Data de Nascimento:</label><br>
                                 <input type="text" name="nascimento" id="nascimento" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="endereco" class="text-info">Endereço <em
-                                        class="important">*</em>:</label><br>
-                                <input type="text" name="endereco" id="endereco" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="numero" class="text-info">Número / Complemento <em
-                                        class="important">*</em>:</label><br>
-                                <input type="text" name="numero" id="numero" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="cidade" class="text-info">Cidade <em class="important">*</em>:</label><br>
-                                <input type="text" name="cidade" id="cidade" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="estado" class="text-info">Estado <em class="important">*</em>:</label><br>
-                                <input type="text" name="estado" id="estado" class="form-control" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="telefone" class="text-info">Digite seu telefone<em
-                                        class="important">*</em>:</label><br>
+                                <label for="estado_civil" class="text-info"><span class="important">*</span>
+                                    Estado Civil:</label>
+                                <select type="text" class="form-control" id="estado_civil" name="estado_civil">
+                                    <option>SELECIONE</option>
+                                    <option>Solteiro</option>
+                                    <option>Casado</option>
+                                    <option>Desquitado</option>
+                                    <option>Viúvo</option>
+                                    <option>Divorciado</option>
+                                    <option>Separado</option>
+                                    <option>Amasiado</option>
+                                    <option>União estável</option>
+                                    <option>Outros</option>
+                                </select>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="uf_naturalidade" class="text-info">
+                                            <span><em class="important">*</em> UF Naturalidade:</span>
+                                        </label>
+                                        <div class="col-lg-8">
+                                            <select type="text" class="form-control" id="uf_naturalidade"
+                                                name="uf_naturalidade">
+                                                <option>SELECIONE</option>
+                                                <option>ACRE</option>
+                                                <option>ALAGOAS</option>
+                                                <option>AMAPA</option>
+                                                <option>AMAZONAS</option>
+                                                <option>BAHIA</option>
+                                                <option>CEARA</option>
+                                                <option>DISTRITO FEDERAL</option>
+                                                <option>ESPÍRITO SANTO</option>
+                                                <option>GOIAS</option>
+                                                <option>MARANHÃO</option>
+                                                <option>MATO GROSSO</option>
+                                                <option>MATO GROSSO DO SUL</option>
+                                                <option>MINAS GERAIS</option>
+                                                <option>PARA</option>
+                                                <option>PARAÍBA</option>
+                                                <option>PARANA</option>
+                                                <option>PERNAMBUCO</option>
+                                                <option>PIAUÍ</option>
+                                                <option>RIO DE JANEIRO</option>
+                                                <option>RIO GRANDE DO NORTE</option>
+                                                <option>RIO GRANDE DO SUL</option>
+                                                <option>RONDONIA</option>
+                                                <option>RORAIMA</option>
+                                                <option>SANTA CATARINA</option>
+                                                <option>SÃO PAULO</option>
+                                                <option>SERGIPE</option>
+                                                <option>TOCANTINS</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="col-lg-8 control-label text-info">
+                                            <span class="important">*</span>
+                                            Município Naturalidade:
+                                        </label>
+                                        <div class="col-lg-13">
+                                            <input type="text" name="municipio_naturalidade" id="municipio_naturalidade"
+                                                class="form-control" required>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="endereco" class="text-info"><span class="important">*</span>
+                                    Endereço:</label><br>
+                                <input type="text" name="endereco" id="endereco" class="form-control" required>
+                                <label for="endereco" class="text-info"><span class="important">*</span>
+                                    Obs.: O agendamento será marcado no posto mais próximo do endereço, caso não haja vaga, será marcado no posto mais próximo contendo a vaga solicitada
+                            </div>
+                            <div class="form-group">
+                                <label for="numero" class="text-info"><span class="important">*</span>
+                                    Número / Complemento:</label><br>
+                                <input type="text" name="numero" id="numero" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bairro" class="text-info"><span class="important">*</span>
+                                    Bairro:</label><br>
+                                <input type="text" name="bairro" id="bairro" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cidade" class="text-info"><span class="important">*</span>
+                                    Cidade:</label><br>
+                                <input type="text" name="cidade" id="cidade" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="estado" class="text-info"><span class="important">*</span>
+                                    Estado:</label><br>
+                                <select type="text" class="form-control" id="estado" name="estado">
+                                    <option>SELECIONE</option>
+                                    <option>ACRE</option>
+                                    <option>ALAGOAS</option>
+                                    <option>AMAPA</option>
+                                    <option>AMAZONAS</option>
+                                    <option>BAHIA</option>
+                                    <option>CEARA</option>
+                                    <option>DISTRITO FEDERAL</option>
+                                    <option>ESPÍRITO SANTO</option>
+                                    <option>GOIAS</option>
+                                    <option>MARANHÃO</option>
+                                    <option>MATO GROSSO</option>
+                                    <option>MATO GROSSO DO SUL</option>
+                                    <option>MINAS GERAIS</option>
+                                    <option>PARA</option>
+                                    <option>PARAÍBA</option>
+                                    <option>PARANA</option>
+                                    <option>PERNAMBUCO</option>
+                                    <option>PIAUÍ</option>
+                                    <option>RIO DE JANEIRO</option>
+                                    <option>RIO GRANDE DO NORTE</option>
+                                    <option>RIO GRANDE DO SUL</option>
+                                    <option>RONDONIA</option>
+                                    <option>RORAIMA</option>
+                                    <option>SANTA CATARINA</option>
+                                    <option>SÃO PAULO</option>
+                                    <option>SERGIPE</option>
+                                    <option>TOCANTINS</option>
+                                </select required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefone" class="text-info"><span class="important">*</span>
+                                    Digite seu telefone:</label><br>
                                 <input type="text" name="telefone" id="telefone" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label for="email" class="text-info">Digite seu e-mail<em
-                                        class="important">*</em>:</label><br>
+                                <label for="email" class="text-info"><span class="important">*</span>
+                                    Digite seu e-mail:</label><br>
                                 <input type="text" name="email" id="email" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label for="confirmaEmail" class="text-info">Confirme seu e-mail<em
-                                        class="important">*</em>:</label><br>
+                                <label for="confirmaEmail" class="text-info"><span class="important">*</span>
+                                    Confirme seu e-mail:</label><br>
                                 <input type="text" name="confirmaEmail" id="confirmaEmail" class="form-control"
                                     required>
                             </div>
                             <div>
                                 <label for="periodo" class="text-info">Escolha o horário preferêncial para atendimento:
                                     <em class="important">O período selecionado pode sofrer
-                                        alterações por conta das medidas contra o Covid-19</em></label>
+                                        alterações por conta das medidas contra o Covid-19 e de acordo com as vagas
+                                        disponíveis</em></label>
                                 <select name="periodo" id="periodo" class="text-info">
                                     <option value="matutino">Matutino</option>
                                     <option value="vespertino">Vespertino</option>

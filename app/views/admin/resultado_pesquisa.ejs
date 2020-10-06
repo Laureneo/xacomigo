@@ -20,6 +20,8 @@
 
     <link rel="icon" type="image / png" Tamanhos="96x96" href="favicon/favicon-96x96.png">
 
+    <script data-ad-client="ca-pub-4337055906490098" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </head>
 
 <body>
@@ -78,11 +80,27 @@
             </p>
 
             <p class="text-info font-consulta">
+                Estado Civil: <%= resultado_pesquisa[0].estado_civil %>
+            </p>
+
+            <p class="text-info font-consulta">
+                UF Naturalidade: <%= resultado_pesquisa[0].uf_naturalidade %>
+            </p>
+
+            <p class="text-info font-consulta">
+                Município Naturalidade: <%= resultado_pesquisa[0].municipio_naturalidade %>
+            </p>
+
+            <p class="text-info font-consulta">
                 Endereço: <%= resultado_pesquisa[0].endereco %>
             </p>
 
             <p class="text-info font-consulta">
                 Número: <%= resultado_pesquisa[0].numero %>
+            </p>
+
+            <p class="text-info font-consulta">
+                Bairro: <%= resultado_pesquisa[0].bairro %>
             </p>
 
             <p class="text-info font-consulta">
@@ -94,19 +112,23 @@
             </p>
 
             <p class="text-info font-consulta">
-                Serviço Solicitado: <%= resultado_pesquisa[0].tipo_agendamento %>
+                Agendamento Solicitado: <%= resultado_pesquisa[0].tipo_agendamento %>
             </p>
 
             <p class="text-info font-consulta">
-                Serviço Solicitado: <%= resultado_pesquisa[0].tipo_certidao %>
+                Município de Agendamento: <%= resultado_pesquisa[0].cidade_agendamento %>
             </p>
 
             <p class="text-info font-consulta">
-                Serviço Solicitado: <%= resultado_pesquisa[0].tipo_mei %>
+                Periodo do Agendamento: <%= resultado_pesquisa[0].periodo %>
             </p>
 
             <p class="text-info font-consulta">
-                Periodo: <%= resultado_pesquisa[0].periodo %>
+                Antecedentes/Certidões Solicitado(s): <%= resultado_pesquisa[0].tipo_certidao %>
+            </p>
+
+            <p class="text-info font-consulta">
+                Serviço MEI Solicitado: <%= resultado_pesquisa[0].tipo_mei %>
             </p>
 
         </div>

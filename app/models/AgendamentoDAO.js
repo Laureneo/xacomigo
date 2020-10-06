@@ -21,6 +21,10 @@ AgendamentoDAO.prototype.salvarAgendamento = function(dadosAgendamento, callback
     var pai = dadosAgendamento.pai
     var mae = dadosAgendamento.mae
     var nascimento = dadosAgendamento.nascimento
+    var uf_naturalidade = dadosAgendamento.uf_naturalidade
+    var municipio_naturalidade = dadosAgendamento.municipio_naturalidade
+    var bairro = dadosAgendamento.bairro
+    var estado_civil = dadosAgendamento.estado_civil
     var endereco = dadosAgendamento.endereco
     var numero = dadosAgendamento.numero
     var cidade = dadosAgendamento.cidade
@@ -29,11 +33,12 @@ AgendamentoDAO.prototype.salvarAgendamento = function(dadosAgendamento, callback
     var email = dadosAgendamento.email
     var periodo = dadosAgendamento.periodo
     var tipo_agendamento = dadosAgendamento.tipo_agendamento
+    var cidade_agendamento = dadosAgendamento.cidade_agendamento
     //var mensagem = dadosAgendamento.mensagem
 
     //Comando para salvar as variáveis criadas no banco de dados
-    this._connection.query(`INSERT INTO agendamento (nome, sexo, cpf, rg, pai, mae, nascimento, endereco, numero, cidade, estado, telefone, email, periodo, tipo_agendamento) 
-        VALUES ('${nome}', '${sexo}', '${cpf}', '${rg}', '${pai}', '${mae}', '${nascimento}', '${endereco}', '${numero}', '${cidade}', '${estado}', '${telefone}', '${email}', '${periodo}', '${tipo_agendamento}')`, 
+    this._connection.query(`INSERT INTO agendamento (nome, sexo, cpf, rg, pai, mae, nascimento, uf_naturalidade, municipio_naturalidade, bairro, estado_civil, endereco, numero, cidade, estado, telefone, email, periodo, tipo_agendamento, cidade_agendamento) 
+        VALUES ('${nome}', '${sexo}', '${cpf}', '${rg}', '${pai}', '${mae}', '${nascimento}', '${uf_naturalidade}', '${municipio_naturalidade}', '${bairro}', '${estado_civil}', '${endereco}', '${numero}', '${cidade}', '${estado}', '${telefone}', '${email}', '${periodo}', '${tipo_agendamento}', '${cidade_agendamento}')`, 
         dadosAgendamento, callback);
     
    //this._connection.query('insert into agendamento set ? ', dadosAgendamento, callback)
